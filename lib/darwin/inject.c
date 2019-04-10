@@ -707,9 +707,9 @@ int substitute_dlopen_in_pid(int pid, const char *filename, int options,
         break;
     case CPU_TYPE_ARM64:
 #if __arm64e__
-	    u.a64.__opaque_sp = target_stack_top;
+        u.a64.__opaque_sp = target_stack_top;
 #else
-	    u.a64.__sp = target_stack_top;
+        u.a64.__sp = target_stack_top;
 #endif
         u.a64.__x[0] = target_stack_top;
 #if __arm64e__
